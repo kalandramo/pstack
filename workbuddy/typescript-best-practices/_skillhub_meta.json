@@ -1,0 +1,11 @@
+{
+  "name": "TypeScript 最佳实践",
+  "installedAt": 1794035678069,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-typescript-best-practices",
+  "pay_mode": 0,
+  "description_zh": "读取或编辑任何 .ts/.tsx 文件时遵循的 TypeScript 类型纪律与模式（判别联合、类型窄化、避免可选字段袋等）。",
+  "description_en": "TypeScript best practices. Use when reading or editing any .ts or .tsx file.",
+  "iconSource": "letter:auto"
+}

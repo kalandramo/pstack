@@ -1,0 +1,11 @@
+{
+  "name": "性能测量审查（Benchmark Checklist）",
+  "installedAt": 1794035679373,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-benchmark-checklist",
+  "pay_mode": 0,
+  "description_zh": "在报告或依据一个性能数字（前后对比、提速/回退声明、调优）之前，核查限流器、调优、边界、错误、可重复性、相关性以及活儿到底有没有干。",
+  "description_en": "Vet a perf measurement (limiter, tuning, limits, errors, repeatability, relevance, and whether the work happened) before you report or act on it. Use when you run a benchmark or report a speedup or regression you measured.",
+  "iconSource": "letter:auto"
+}

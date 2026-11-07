@@ -1,0 +1,11 @@
+{
+  "name": "状态图与形式化验证（Statechart）",
+  "installedAt": 1794035680936,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-statechart",
+  "pay_mode": 0,
+  "description_zh": "用 TLA+ 风格画状态图并对运行结果做形式化检查/可视化。自带 TypeScript 工程（scripts/），需要 Node 环境运行。",
+  "description_en": "Check a TLA+ model of a system that moves between states, such as a product flow, a protocol, or a service, and draw it as a Mermaid statechart. The report gives the shortest path to each state that breaks a rule. Use for /statechart, or to show a bug as a path through states.",
+  "iconSource": "letter:auto"
+}

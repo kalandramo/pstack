@@ -1,0 +1,11 @@
+{
+  "name": "去 AI 味（Unslop）",
+  "installedAt": 1794035677516,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-unslop",
+  "pay_mode": 0,
+  "description_zh": "清除任何文本里的 AI 写作痕迹——套路化表达、空话、机器腔，保留原意与语气。触发：润色回复、文档、PR 描述、提交信息，或用户要求去 AI 味。",
+  "description_en": "Cut AI tells from any writing.",
+  "iconSource": "letter:auto"
+}

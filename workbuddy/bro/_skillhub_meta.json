@@ -1,0 +1,11 @@
+{
+  "name": "大白话说清楚（Bro）",
+  "installedAt": 1794035677593,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-bro",
+  "pay_mode": 0,
+  "description_zh": "用大白话把上一条消息重述一遍，去掉术语和黑话，像一个人跟另一个人聊天那样简洁明了。",
+  "description_en": "Restate the last message in plain human language, with no jargon.",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "纠错工程（Correct）",
+  "installedAt": 1794035679242,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-correct",
+  "pay_mode": 0,
+  "description_zh": "找出仓库里智能体反复犯的同类错误，并让下一个智能体犯不了：优先架构，其次类型，再是可命名修复的 lint，然后是测试，文档最后。每次被纠正就迭代一次。",
+  "description_en": "Find the mistakes agents keep repeating in this repo and make each one impossible. Try architecture first, then types, then a lint whose error names the fix, then a test, and write docs last. Prove each check fails on a real past mistake. Repeat this each time the operator corrects you. Use for /correct.",
+  "iconSource": "letter:auto"
+}

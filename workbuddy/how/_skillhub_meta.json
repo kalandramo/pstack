@@ -1,0 +1,11 @@
+{
+  "name": "代码走查讲解（How）",
+  "installedAt": 1794035677758,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-how",
+  "pay_mode": 0,
+  "description_zh": "讲解某个子系统是怎么运作的：架构、运行时流程、上手心智模型。用于改代码前的代码走查，以及归属/分层问题（这段代码该放哪、哪个包负责）。",
+  "description_en": "Use for \\\"how does X work\\\", code walkthroughs before changing something, and placement / ownership / layering questions (\\\"where should this live\\\", \\\"which package owns this\\\", \\\"is this the right layer\\\"). Explains subsystem architecture, runtime flow, onboarding mental models. Use why for motivation.",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "个性化技能（Automate Me）",
+  "installedAt": 1794035679118,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-automate-me",
+  "pay_mode": 0,
+  "description_zh": "把用户的工作习惯与偏好提炼成一个专属 -mode 技能（如 jay-mode）。编排挖掘、skill-creator（WorkBuddy 内有 skill-creator 技能）与 unslop 三步。",
+  "description_en": "Use for \\\"automate me\\\", \\\"create/update/refresh my -mode skill\\\", \\\"turn/capture my preferences or working style into a skill\\\", or wanting agents to follow how the user works. Drafts or revises a personal -mode skill via create-skill + unslop, optionally pulling fresh evidence from recent transcripts.",
+  "iconSource": "letter:auto"
+}

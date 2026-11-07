@@ -1,0 +1,11 @@
+{
+  "name": "对抗评审（Interrogate）",
+  "installedAt": 1794035678455,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-interrogate",
+  "pay_mode": 0,
+  "description_zh": "多模型对抗审查改动或设计，只有被一次运行证明的发现有价值；只报告发现，不自己改代码。",
+  "description_en": "Use for \\\"interrogate\\\", \\\"adversarial review\\\", \\\"multi-model review\\\", \\\"challenge this\\\", \\\"stress test this code\\\", \\\"find blind spots\\\", or \\\"tear this apart\\\". Adversaries try to break a change or design, and only findings proven by a run survive.",
+  "iconSource": "letter:auto"
+}

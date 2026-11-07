@@ -1,0 +1,11 @@
+{
+  "name": "并行扇出覆盖（Swarm）",
+  "installedAt": 1794035678324,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-swarm",
+  "pay_mode": 0,
+  "description_zh": "并行多切片探索/校验：用覆盖矩阵、竞速（race）、夹击（gauntlet）和探索分区来展开任务，避免单线盲点。",
+  "description_en": "Fan out N parallel workers, drain them, and return one report. Use for /swarm, 'swarm this', or parallel coverage, races, gauntlets, and exploration.",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "测试驱动修复（TDD）",
+  "installedAt": 1794035677921,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-tdd",
+  "pay_mode": 0,
+  "description_zh": "当 bug 有清晰、廉价的测试路径时，先写一个会失败的回归测试，再去改生产代码；测试不划算（需重 harness、脆mock、端到端慢）就跳过，改用最接近的验证。",
+  "description_en": "Use only when the user explicitly asks for TDD, a failing test, or a regression test, OR when the bug has an obvious cheap local test target. Skip when the test path is unclear, expensive, integration-heavy, or not requested.",
+  "iconSource": "letter:auto"
+}

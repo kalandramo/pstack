@@ -1,0 +1,11 @@
+{
+  "name": "多方案竞技（Arena）",
+  "installedAt": 1794035678197,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-arena",
+  "pay_mode": 0,
+  "description_zh": "就同一任务并行派出 N 个候选，选一个作基版，再把落败者最强的部分嫁接进基版。用于不确定形态的非平凡产物。",
+  "description_en": "Spawn N parallel candidates at the same task, pick a base, graft the strongest parts of the losers into it. Use for /arena, 'arena this', 'throw it in the arena', or when one attempt at a non-trivial artifact would lock in the wrong shape.",
+  "iconSource": "letter:auto"
+}
