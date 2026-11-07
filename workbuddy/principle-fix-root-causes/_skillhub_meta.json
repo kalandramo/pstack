@@ -1,0 +1,11 @@
+{
+  "name": "原则：修根因",
+  "installedAt": 1794036511152,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-fix-root-causes",
+  "pay_mode": 0,
+  "description_zh": "调试时：把每个症状回溯到系统第一次出错的地方，在那里修。守卫只有在它处理的是合法状态时，才算修复。",
+  "description_en": "Apply when debugging. Trace each symptom back to the first place the system went wrong and fix it there. A guard is a fix only when the state it handles is legitimate.",
+  "iconSource": "letter:auto"
+}

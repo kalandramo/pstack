@@ -1,0 +1,11 @@
+{
+  "name": "追溯设计动机（Why）",
+  "installedAt": 1794036508404,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-why",
+  "pay_mode": 0,
+  "description_zh": "追查代码背后的动机与意图：为什么这样实现、为什么选 Y、设计权衡、回归、复盘、数据支撑的阈值。并行查询各类证据源（版本库、问题追踪、长文档、实时聊天、可观测性、错误追踪、产品分析），给出带引用的决策与权衡解读。运行时行为讲解用 how。",
+  "description_en": "Use for 'why does X work this way', 'why we picked Y', design rationale, regressions, postmortems, or data-backed thresholds. Discovers available MCPs and queries each evidence category (source control, issue tracker, long-form docs, real-time chat, infrastructure observability, error tracking, product analytics warehouse) in parallel, then returns a cited read on decisions and tradeoffs. Use how for runtime behavior.",
+  "iconSource": "letter:auto"
+}

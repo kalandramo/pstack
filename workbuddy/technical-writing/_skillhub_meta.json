@@ -1,0 +1,11 @@
+{
+  "name": "技术写作规范（Technical Writing）",
+  "installedAt": 1794036508537,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-technical-writing",
+  "pay_mode": 0,
+  "description_zh": "分层技术写作标准：Diátaxis 结构、Google 开发者风格句法、STE 指令规则、Global English 句法。用于写或审文档、RFC、README、PR 描述、提交信息。",
+  "description_en": "Layered technical-writing standard: Diátaxis structure, Google developer style sentences, STE instruction rules, Global English syntax. Use for /technical-writing or when writing or reviewing docs, RFCs, readmes, PR descriptions, or commit messages.",
+  "iconSource": "letter:auto"
+}

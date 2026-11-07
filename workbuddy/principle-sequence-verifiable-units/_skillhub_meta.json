@@ -1,0 +1,11 @@
+{
+  "name": "原则：编排可验证单元",
+  "installedAt": 1794036514134,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-sequence-verifiable-units",
+  "pay_mode": 0,
+  "description_zh": "多步工作（扫描、迁移、成批相似编辑）以及提交/PR 堆叠时：把工作拆成都以可验证状态收尾的小单元，逐个检查后再下一步，并按能让审查者自行证明的顺序交付。",
+  "description_en": "Apply to multi-step work (sweeps, migrations, runs of similar edits) and to how you stack commits and PRs. Break work into small units that each end in a verifiable state, check each before the next, and order delivery so the sequence proves itself to a reviewer.",
+  "iconSource": "letter:auto"
+}

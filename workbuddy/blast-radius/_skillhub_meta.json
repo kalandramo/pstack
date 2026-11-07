@@ -1,0 +1,11 @@
+{
+  "name": "影响范围分析（Blast Radius）",
+  "installedAt": 1794036509287,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-blast-radius",
+  "pay_mode": 0,
+  "description_zh": "在改动上线前，找出它可能在他处破坏什么（超出 diff 本身），并用真实运行代码证明「它因为 X 而安全」，而不是写报告了事。用于「X 的影响范围」「这可能破坏什么」或审一个你不信任的小 diff。",
+  "description_en": "Find what a change could break somewhere else before it ships, beyond the diff, and prove the one fact it's safe because of by running real code instead of writing it up. Use for 'blast radius of X', 'what could this break', or reviewing a small diff you don't trust.",
+  "iconSource": "letter:auto"
+}

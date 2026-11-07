@@ -1,0 +1,11 @@
+{
+  "name": "原则：建模领域",
+  "installedAt": 1794036512819,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-model-the-domain",
+  "pay_mode": 0,
+  "description_zh": "写有状态逻辑时，或代码大量分支/在多处重复同一形状假设时：先把领域建模清楚。",
+  "description_en": "Apply when writing stateful logic, or when code branches a lot or repeats a shape assumption across files.",
+  "iconSource": "letter:auto"
+}

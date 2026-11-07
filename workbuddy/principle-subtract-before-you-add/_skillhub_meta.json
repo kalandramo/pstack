@@ -1,0 +1,11 @@
+{
+  "name": "原则：先减后加",
+  "installedAt": 1794036514381,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-subtract-before-you-add",
+  "pay_mode": 0,
+  "description_zh": "安排新增/重构/重写顺序时：先删死代码、冗余校验器、桩引用，再在更简单的基底上构建。",
+  "description_en": "Apply when sequencing an addition, refactor, or rewrite. Remove dead code, redundant validators, and stub references first, then build on the simpler base.",
+  "iconSource": "letter:auto"
+}

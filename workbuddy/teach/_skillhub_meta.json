@@ -1,0 +1,11 @@
+{
+  "name": "讲解传授（Teach）",
+  "installedAt": 1794036508469,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-teach",
+  "pay_mode": 0,
+  "description_zh": "把一段工作用大白话讲清楚，让人真正理解。串联 how 与 why 两个技能的产出，编织成一份统一、易懂的讲解。用于「教我这个」「帮我真正理解 X」「给我讲讲这个改动或子系统」。",
+  "description_en": "Explain a body of work plainly so a person actually understands it. Runs the `how` and `why` skills and weaves what they find into one clear explanation. Use for 'teach me this', 'help me really understand X', 'explain this change or subsystem to me'.",
+  "iconSource": "letter:auto"
+}

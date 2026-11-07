@@ -1,6 +1,10 @@
 # pstack × WorkBuddy 移植版
 
-本目录是 [backnotprop/pstack](https://github.com/backnotprop/pstack)（Poteto 的 AI 严谨工程方法论技能集）中**可独立运行**的 17 个技能，针对 **WorkBuddy** 技能格式做的移植。
+本目录是 [backnotprop/pstack](https://github.com/backnotprop/pstack)（Poteto 的 AI 严谨工程方法论技能集）中**已移植**的 47 个技能，针对 **WorkBuddy** 技能格式做的移植：
+
+- **17 个独立技能**（自包含，不依赖其他技能）
+- **24 条工程原则**（`principle-*`，每条一条规则，是方法论骨架）
+- **6 个依赖型技能**（`why` `teach` `technical-writing` `architect` `blast-radius` `no-comments`，依赖已在上面的技能里满足）
 
 原仓库遵循 `agentskills.io` / Cursor 的 `SKILL.md` 规范，WorkBuddy 无法直接识别，因此这里把每个技能的 frontmatter 重写为 WorkBuddy 规范，并保留原始方法论正文、references 与 scripts。
 
@@ -11,7 +15,7 @@
 
 两者并存，互不影响；本 fork 仍可正常同步上游 pstack。
 
-## 包含的 17 个独立技能
+## 独立技能（17 个，自包含）
 
 | 技能 | 作用 |
 |------|------|
@@ -33,7 +37,18 @@
 | `sharpen` | 把任务做深不做大，重写提示词 |
 | `statechart` | TLA+ 风格状态图与形式化验证可视化（自带 TS 工程） |
 
-> 未移植 `poteto-mode` 等依赖型技能（它们依赖约 58 个技能 + 24 条原则 + 2 个子代理的耦合图）。
+## 工程原则与依赖技能（30 个）
+
+**24 条原则**（每条一句话规则，被 `poteto-mode` 等引用，也可单独用作原则库）：
+
+`principle-attack-the-premise`（攻击前提）、`principle-boundary-discipline`（边界纪律）、`principle-build-the-lever`（造杠杆）、`principle-encode-lessons-in-structure`（把教训编码进结构）、`principle-exhaust-the-design-space`（穷尽设计空间）、`principle-experience-first`（体验优先）、`principle-explain-the-number`（解释数字）、`principle-fix-root-causes`（修根因）、`principle-foundational-thinking`（基础思维）、`principle-guard-the-context-window`（守护上下文窗口）、`principle-laziness-protocol`（懒惰协议）、`principle-make-operations-idempotent`（操作幂等）、`principle-migrate-callers-then-delete-legacy-apis`（先迁调用方再删旧 API）、`principle-minimize-reader-load`（最小化读者负担）、`principle-model-the-domain`（建模领域）、`principle-never-block-on-the-human`（别卡在人身上）、`principle-outcome-oriented-execution`（结果导向执行）、`principle-prove-it-works`（证明它有效）、`principle-redesign-from-first-principles`（第一性原理重设计）、`principle-separate-before-serializing-shared-state`（先分离再串行化共享状态）、`principle-sequence-verifiable-units`（编排可验证单元）、`principle-subtract-before-you-add`（先减后加）、`principle-test-behavior-not-implementation`（测行为不测实现）、`principle-type-system-discipline`（类型系统纪律）。
+
+**6 个依赖型技能**：`why`（追溯设计动机）、`teach`（讲解传授）、`technical-writing`（技术写作规范）、`architect`（架构草图）、`blast-radius`（影响范围分析）、`no-comments`（去注释审查）。
+
+## 尚未移植
+
+- `poteto-mode` 路由及其 2 个子代理（`agents/poteto-agent.md`、`comment-sicko.md`）：需要把 Cursor 的模型配置文件、`grok/claude` 模型 slug 与子代理机制改写为适配 WorkBuddy 的 Agent 调用，工作量大，未搬。
+- 小众 / 在 WorkBuddy 场景下非必需：`setup-pstack`（别的 harness 安装器，已手动装完）、`ketchup` / `ketchup-video`（生成视频）、`make-bot-ui`、`recall`（WorkBuddy 自有记忆）、`create/maintain-verification-skill` 与 `create/maintain-formal-verification-skill`（造验证技能的脚手架）。
 
 ## 安装到 WorkBuddy
 
@@ -49,7 +64,7 @@ for d in workbuddy/*/; do
 done
 ```
 
-安装后**重启/刷新 WorkBuddy 会话**，技能即会出现在可用列表，例如直接说「用 unslop 润色一下」「用 arena 给我几个方案」即可触发。
+安装后**重启/刷新 WorkBuddy 会话**，技能即会出现在可用列表，例如直接说「用 unslop 润色一下」「用 architect 给我设计」「用 principle-prove-it-works 的原则复查」即可触发。
 
 ## 格式差异说明
 

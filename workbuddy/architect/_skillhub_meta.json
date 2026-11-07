@@ -1,0 +1,11 @@
+{
+  "name": "架构草图（Architect）",
+  "installedAt": 1794036508971,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-architect",
+  "pay_mode": 0,
+  "description_zh": "在写代码前先勾勒类型、函数签名与模块结构（用 not implemented 体与伪代码），并在实现填充时保持在回路中。多模型视角综合后，再对照选定的草图填代码。用于「设计这个」「架构这个」或非平凡工作。",
+  "description_en": "Sketch types, signatures, and module structure before code, then stay in the loop while implementation fills in. Use for /architect, 'architect this', 'design this', or non-trivial work where jumping to code would lock in the wrong shape.",
+  "iconSource": "letter:auto"
+}

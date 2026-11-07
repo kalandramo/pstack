@@ -1,0 +1,11 @@
+{
+  "name": "原则：第一性原理重设计",
+  "installedAt": 1794036513764,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-redesign-from-first-principles",
+  "pay_mode": 0,
+  "description_zh": "把新需求整合进既有设计时：从第一性原理重新设计。",
+  "description_en": "Apply when integrating a new requirement into an existing design.",
+  "iconSource": "letter:auto"
+}

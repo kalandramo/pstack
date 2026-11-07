@@ -1,0 +1,11 @@
+{
+  "name": "原则：证明它有效",
+  "installedAt": 1794036513515,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-prove-it-works",
+  "pay_mode": 0,
+  "description_zh": "完成任务后、宣布做完前：对着真实产物验证（跑功能、读真实值、看 diff），而不是代理、自报或「能编译」。",
+  "description_en": "Apply after completing a task, before declaring done. Verify against the real artifact (run the feature, read the actual value, inspect the diff), not a proxy, self-report, or 'it compiles.",
+  "iconSource": "letter:auto"
+}

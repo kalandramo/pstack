@@ -1,0 +1,11 @@
+{
+  "name": "原则：别卡在人身上",
+  "installedAt": 1794036512919,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-never-block-on-the-human",
+  "pay_mode": 0,
+  "description_zh": "想在可逆工作上问「我要不要做 X」时：别问，直接做并报告。",
+  "description_en": "Apply when tempted to ask 'should I do X?' on reversible work.",
+  "iconSource": "letter:auto"
+}

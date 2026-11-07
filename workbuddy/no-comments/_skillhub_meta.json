@@ -1,0 +1,11 @@
+{
+  "name": "去注释审查（No Comments）",
+  "installedAt": 1794036509461,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-no-comments",
+  "pay_mode": 0,
+  "description_zh": "派发 Comment Sicko 子代理审查 diff，处理被接受的发现，并把声称为「约束」的注释转成可编码的形式（类型/测试/断言/lint）。",
+  "description_en": "Spawn Comment Sicko, fix accepted findings, and offer encodings for claimed constraints.",
+  "iconSource": "letter:auto"
+}

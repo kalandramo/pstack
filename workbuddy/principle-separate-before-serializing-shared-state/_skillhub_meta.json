@@ -1,0 +1,11 @@
+{
+  "name": "原则：先分离再串行化共享状态",
+  "installedAt": 1794036513946,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-separate-before-serializing-shared-state",
+  "pay_mode": 0,
+  "description_zh": "并发参与者可能写同一文件/分支/键/状态对象时：先消除共享；只有当「单一共享写者」是真实不变量时才做结构性串行化。",
+  "description_en": "Apply when concurrent actors might write to the same file, branch, key, or state object. Eliminate the sharing first; serialize structurally only when one shared writer is a real invariant.",
+  "iconSource": "letter:auto"
+}

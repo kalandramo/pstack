@@ -1,0 +1,11 @@
+{
+  "name": "原则：类型系统纪律",
+  "installedAt": 1794036514822,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-type-system-discipline",
+  "pay_mode": 0,
+  "description_zh": "设计类型、审查函数签名、或用任何静态类型语言写代码时：让非法状态不可表示、给语义原语打标、在边界解析外部数据、穷尽变体、从权威 schema 推导。",
+  "description_en": "Apply when designing types, reviewing a function signature, or writing code in any statically-typed language. Make illegal states unrepresentable, brand semantic primitives, parse external data at boundaries, exhaust variants, derive from authoritative schemas.",
+  "iconSource": "letter:auto"
+}

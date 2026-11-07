@@ -1,0 +1,11 @@
+{
+  "name": "原则：最小化读者负担",
+  "installedAt": 1794036512522,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-minimize-reader-load",
+  "pay_mode": 0,
+  "description_zh": "审或塑造难以追迹的代码时：数清楚「问题到答案」之间的层数与读者脑中隐藏状态；折叠只被调用一次的包装、缩小可变作用域。",
+  "description_en": "Apply when reviewing or shaping code that's hard to trace. Count layers between question and answer, and hidden state in the reader's head; collapse one-caller wrappers and shrink mutable scope.",
+  "iconSource": "letter:auto"
+}

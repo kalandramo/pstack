@@ -1,0 +1,11 @@
+{
+  "name": "原则：结果导向执行",
+  "installedAt": 1794036513189,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-outcome-oriented-execution",
+  "pay_mode": 0,
+  "description_zh": "在带明确阶段边界的计划重写/迁移中：向目标架构收敛，别用一次性兼容代码保平滑的中间态。",
+  "description_en": "Apply during planned rewrites and migrations with explicit phase boundaries. Converge on the target architecture; don't preserve smooth intermediate states with throwaway compatibility code.",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "原则：测行为不测实现",
+  "installedAt": 1794036514631,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-test-behavior-not-implementation",
+  "pay_mode": 0,
+  "description_zh": "写/改/保留测试时：断言代码用户能观察到的行为，使测试在该行为破坏时失败、仅在内部变化时仍通过。",
+  "description_en": "Apply when you write, change, or keep a test. Assert what the code's users can observe, so that the test fails when that behavior breaks and keeps passing when only the internals change.",
+  "iconSource": "letter:auto"
+}

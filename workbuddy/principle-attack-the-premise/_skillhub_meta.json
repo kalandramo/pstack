@@ -1,0 +1,11 @@
+{
+  "name": "原则：攻击前提",
+  "installedAt": 1794036509645,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-attack-the-premise",
+  "pay_mode": 0,
+  "description_zh": "当两个及以上共享同一前提的修复都倒在同一个关卡时：先把前提写下来直接测试，再写下一个假设它成立的修复。",
+  "description_en": "Apply when two or more fixes that share one premise have failed the same gate. Write the premise down and test it directly before you write another fix that assumes it.",
+  "iconSource": "letter:auto"
+}

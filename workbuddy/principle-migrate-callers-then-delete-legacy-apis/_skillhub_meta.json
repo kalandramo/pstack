@@ -1,0 +1,11 @@
+{
+  "name": "原则：先迁调用方再删旧 API",
+  "installedAt": 1794036512282,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-migrate-callers-then-delete-legacy-apis",
+  "pay_mode": 0,
+  "description_zh": "引入新内部 API 而旧调用方还在时：在同一波里迁移调用方并删除旧 API，而不是保留兼容层。",
+  "description_en": "Apply when introducing a new internal API while old callers still exist. Migrate callers and delete the old API in the same wave instead of preserving compatibility layers.",
+  "iconSource": "letter:auto"
+}

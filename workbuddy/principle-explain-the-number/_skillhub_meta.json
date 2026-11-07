@@ -1,0 +1,11 @@
+{
+  "name": "原则：解释数字",
+  "installedAt": 1794036510964,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-explain-the-number",
+  "pay_mode": 0,
+  "description_zh": "在你测量之前、以及在你信任/报告/依据某个数字（提速、回退、吞吐、延迟、eval 结果）行动之前：找出限制它的因素，并排除它测的是别的东西。",
+  "description_en": "Apply before you measure, and before you trust, report, or act on a number you measured: a speedup, a regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured something other than the work you think.",
+  "iconSource": "letter:auto"
+}

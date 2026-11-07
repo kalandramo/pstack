@@ -1,0 +1,11 @@
+{
+  "name": "原则：体验优先",
+  "installedAt": 1794036510739,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-principle-experience-first",
+  "pay_mode": 0,
+  "description_zh": "当涉及产品、UX 或功能范围权衡时：选用户愉悦而非实现便利；少而精的功能优于多而糙。",
+  "description_en": "Apply when product, UX, or feature-scope tradeoffs come up. Choose user delight over implementation convenience; ship fewer polished features over more rough ones.",
+  "iconSource": "letter:auto"
+}
