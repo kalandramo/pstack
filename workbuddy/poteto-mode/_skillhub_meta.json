@@ -1,0 +1,11 @@
+{
+  "name": "Poteto 模式（自动路由工作流）",
+  "installedAt": 1794036511790,
+  "source": "local-fork:kalandramo/pstack",
+  "version": "1.0.0",
+  "skillId": "pstack-poteto-mode",
+  "pay_mode": 0,
+  "description_zh": "总路由元技能：按任务类型自动选剧本并编排子代理，配套 23 个 playbook、24 条 principle、已移植的 how/architect/arena/interrogate/tdd/unslop 等技能。",
+  "description_en": "Meta-router: picks a playbook per task type and orchestrates subagents, with 23 playbooks, 24 principles, and ported skills.",
+  "iconSource": "letter:auto"
+}
