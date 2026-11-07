@@ -6,6 +6,7 @@ Read-only commands (validate, status) never copy. install is idempotent
 """
 import argparse
 import json
+import os
 import shutil
 import sys
 from dataclasses import dataclass, field
@@ -13,7 +14,12 @@ from enum import Enum
 from pathlib import Path
 import re
 
-SOURCE = Path("/Users/moweilong/Workspace/go/src/github.com/kalandramo/pstack/workbuddy")
+SCRIPT_DIR = Path(__file__).resolve().parent
+# Default to the fork's workbuddy/ dir; override with PSTACK_WORKBUDDY_SRC (used in CI).
+_DEFAULT_SOURCE = Path("/Users/moweilong/Workspace/go/src/github.com/kalandramo/pstack/workbuddy")
+SOURCE = Path(os.environ.get("PSTACK_WORKBUDDY_SRC") or "") or (
+    _DEFAULT_SOURCE if _DEFAULT_SOURCE.exists() else SCRIPT_DIR
+)
 TARGET = Path.home() / ".workbuddy" / "skills"
 FORK_MARKER = "local-fork:kalandramo/pstack"
 REQUIRED_KEYS = {"name", "version", "display_name", "description", "description_zh", "description_en"}
@@ -174,14 +180,35 @@ def cmd_status(args):
     sys.exit(0)
 
 
+def cmd_lint(args):
+    """Validate the SOURCE skill dirs (frontmatter + meta) without installing.
+    Used by CI / pre-commit to catch regressions in the repo. Every dir in
+    SOURCE is in scope; no foreign/scope logic."""
+    if not SOURCE.exists():
+        print(f"SOURCE not found: {SOURCE}")
+        sys.exit(1)
+    dirs = sorted(e for e in SOURCE.iterdir() if e.is_dir())
+    recs = [validate_skill(SkillRecord(name=d.name, tgt_dir=d)) for d in dirs]
+    print(f"\n{'skill':<32} status")
+    print("-" * 40)
+    for r in recs:
+        print(f"{r.name:<32} {r.status.value}")
+        for e in r.errors:
+            print(f"    ! {e}")
+    failed = [r for r in recs if r.status != Status.OK]
+    print(f"\nlint: {len(recs)} skills, {len(recs) - len(failed)} OK, {len(failed)} failed")
+    sys.exit(0 if not failed else 1)
+
+
 def main():
     p = argparse.ArgumentParser(description="Manage pstack WorkBuddy skills")
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("install")
     sub.add_parser("validate")
     sub.add_parser("status")
+    sub.add_parser("lint")
     args = p.parse_args()
-    {"install": cmd_install, "validate": cmd_validate, "status": cmd_status}[args.cmd](args)
+    {"install": cmd_install, "validate": cmd_validate, "status": cmd_status, "lint": cmd_lint}[args.cmd](args)
 
 
 if __name__ == "__main__":

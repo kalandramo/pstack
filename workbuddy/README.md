@@ -70,25 +70,69 @@
 
 以下在 WorkBuddy 场景下基本用不上，刻意未搬：`setup-pstack`（别的 harness 安装器，已手动装完）、`ketchup` / `ketchup-video`（生成视频）、`make-bot-ui`、`recall`（WorkBuddy 自有记忆）、`create/maintain-verification-skill` 与 `create/maintain-formal-verification-skill`（造验证技能的脚手架）。
 
-## 安装到 WorkBuddy
+## 安装
 
-方式一：直接复制
+本仓库同时提供两套格式，按你用的 harness 选对应安装方式。
+
+### A. WorkBuddy 用户（推荐）
+
+一键安装 + 自动校验（幂等、不破坏其他技能如 `superpowers`）：
+
+```bash
+python3 workbuddy/manage_skills.py install
+```
+
+仅复制（`cp`）：
+
 ```bash
 cp -R workbuddy/* ~/.workbuddy/skills/
 ```
 
-方式二：软链（方便随本仓库更新）
+软链（方便随本仓库更新）：
+
 ```bash
 for d in workbuddy/*/; do
   ln -s "$(pwd)/$d" ~/.workbuddy/skills/"$(basename "$d")"
 done
 ```
 
+### B. Claude Code / Cursor / OpenCode 用户（agentskills.io 原生）
+
+根目录 `skills/` 仍是原版 agentskills.io 格式，可直接用 skillhub 工具安装：
+
+```bash
+npx skills add kalandramo/pstack          # 默认扫根 skills/（agentskills.io 格式）
+npx skills add -g kalandramo/pstack       # 装到全局
+```
+
+### C. 用 skillhub 工具拉取 WorkBuddy 版
+
+本仓库根目录有 `skillhub.json` 清单（目录化 `workbuddy/` 下 48 个技能）。若想用 `npx skills add` 精确拉取 WorkBuddy 版目录：
+
+```bash
+npx skills add https://github.com/kalandramo/pstack/tree/workbuddy-port/workbuddy
+```
+
+> 注意：`npx skills add` 属于 agentskills.io 生态，会把技能装到对应 harness 的技能目录（`.claude/skills`、`.cursor/skills` 等），**并不认识 WorkBuddy 的 `~/.workbuddy/skills`**。所以 WorkBuddy 用户请优先用上面的 **方式 A**（`manage_skills.py` 直接装入 `~/.workbuddy/skills`）。
+
 安装后**重启/刷新 WorkBuddy 会话**，技能即会出现在可用列表：
 
 - 进入自动路由：「进入 poteto 模式」「按 pstack 方式做」「poteto 风格来一遍」
 - 单独调用：「用 unslop 润色一下」「用 architect 给我设计」「用 principle-prove-it-works 的原则复查」
 
+## 校验工具 `manage_skills.py`
+
+仓库根 `workbuddy/manage_skills.py` 是纯标准库的单文件 CLI，管理这套移植包：
+
+| 命令 | 作用 |
+|------|------|
+| `install` | 幂等复制 `workbuddy/*` 到 `~/.workbuddy/skills/`，装后自动 `validate` |
+| `validate` | 校验已安装技能：`SKILL.md` frontmatter 必含 `name/version/display_name/description/description_zh/description_en` + `_skillhub_meta.json` 合法 |
+| `status` | 只读报告：已装 / 未装 / 孤儿 / 外来（如 `superpowers`） |
+| `lint` | 校验**源目录** `workbuddy/` 的 frontmatter+meta（CI / 提交前用，不需先安装） |
+
+CI（`.github/workflows/validate.yml`）在每次 push/PR 到 `workbuddy-port` 时自动跑 `lint`，frontmatter 或 meta 不合规会让流水线变红。
+
 ## 格式差异说明
 
-WorkBuddy 的 `SKILL.md` frontmatter 字段：`name` / `version` / `display_name` / `description`(中文主描述) / `description_zh` / `description_en`。已剔除原版 Cursor 专属字段（`disable-model-invocation`、`icon`、`color`、`paths`），并为每个技能生成 `_skillhub_meta.json`。
+WorkBuddy 的 `SKILL.md` frontmatter 字段：`name` / `version` / `display_name` / `description`(中文主描述) / `description_zh` / `description_en`。已剔除原版 Cursor 专属字段（`disable-model-invocation`、`icon`、`color`、`paths`），并为每个技能生成 `_skillhub_meta.json`。根目录 `skillhub.json` 是供 skillhub 发现/发布的清单（指向 `workbuddy/*`）。

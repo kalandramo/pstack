@@ -1,0 +1,28 @@
+name: validate-skills
+
+on:
+  push:
+    branches: [workbuddy-port]
+    paths:
+      - "workbuddy/**"
+      - ".github/workflows/validate.yml"
+  pull_request:
+    branches: [workbuddy-port]
+    paths:
+      - "workbuddy/**"
+      - ".github/workflows/validate.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate WorkBuddy skill frontmatter + metadata
+        run: python3 workbuddy/manage_skills.py lint
