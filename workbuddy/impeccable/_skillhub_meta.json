@@ -1,0 +1,11 @@
+{
+  "name": "impeccable",
+  "version": "1.0.0",
+  "installedAt": "2026-11-07",
+  "source": "local-fork:kalandramo/pstack",
+  "skillId": "impeccable",
+  "pay_mode": "free",
+  "description_zh": "前端 UI 的 AI slop 检测与修正，封装 npx impeccable detect（62 条确定性规则，无 LLM）。",
+  "description_en": "Deterministic AI-slop detector for web UI, wrapping npx impeccable detect (62 rules, no LLM).",
+  "iconSource": "text"
+}

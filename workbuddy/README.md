@@ -1,11 +1,12 @@
 # pstack × WorkBuddy 移植版
 
-本目录是 [backnotprop/pstack](https://github.com/backnotprop/pstack)（Poteto 的 AI 严谨工程方法论技能集）中**已移植**的 48 个技能，针对 **WorkBuddy** 技能格式做的移植：
+本目录是 [backnotprop/pstack](https://github.com/backnotprop/pstack)（Poteto 的 AI 严谨工程方法论技能集）中**已移植**的 49 个技能，针对 **WorkBuddy** 技能格式做的移植：
 
 - **17 个独立技能**（自包含，不依赖其他技能）
 - **24 条工程原则**（`principle-*`，每条一条规则，是方法论骨架）
 - **6 个依赖型技能**（`why` `teach` `technical-writing` `architect` `blast-radius` `no-comments`）
-- **1 个自动路由元技能**（`poteto-mode`：总路由 + 23 个 playbook 剧本 + 子代理定义，实现"说一句需求自动选剧本编排子代理"）
+- **1 个自动路由元技能**（`poteto-mode`：总路由 + 24 个 playbook 剧本 + 子代理定义，实现"说一句需求自动选剧本编排子代理"）
+- **1 个 UI 去 AI 味封装技能**（`impeccable`：封装 `npx impeccable detect` 的 62 条确定性规则引擎，是 `unslop` 在 **UI 层** 的等价物，已接入 `poteto-mode` 自动路由）
 
 原仓库遵循 `agentskills.io` / Cursor 的 `SKILL.md` 规范，WorkBuddy 无法直接识别，因此这里把每个技能的 frontmatter 重写为 WorkBuddy 规范，并保留原始方法论正文、references 与 scripts。
 
@@ -53,7 +54,7 @@
 包含内容：
 
 - `SKILL.md`：Non-negotiables（强制规范）、24 条 Principles 索引、Autonomy（自主度）、Writing the reply（写作规范）、Harness（已新增 **WorkBuddy 优先**的映射）、Playbooks 路由表。
-- `playbooks/`（23 个剧本）：Investigation、Bug fix、Perf issue、Hillclimb、Feature、Refactoring、Prototype、Visual parity、Eval、Babysit、Shipping、Autonomous run、Orchestrate、Autopilot-full/stack、Session pickup、Pause safely、Multi-phase plan、Worktree cleanup、Opening a PR 等。
+- `playbooks/`（24 个剧本）：Investigation、Bug fix、Perf issue、Hillclimb、Feature、Refactoring、Prototype、Visual parity、**UI design**（impeccable 去 AI 味闸门）、Eval、Babysit、Shipping、Autonomous run、Orchestrate、Autopilot-full/stack、Session pickup、Pause safely、Multi-phase plan、Worktree cleanup、Opening a PR 等。
 - `references/`：`bugbot-triage.md`（评审意见分类）、`poteto-agent.md` 与 `comment-sicko.md`（原仓库 `agents/` 下的两个子代理定义，并入此处）。
 - `scripts/`（可选）：PR 监控等 TS 工程（`watch-pr/`、`check-plan.mjs`、`worktree-audit.sh`），运行需 Node/bun 环境。
 
@@ -65,6 +66,19 @@
 - `/loop`、`/setup-pstack`、`create-skill` 等 Cursor 专属命令 → 改写或标注 WorkBuddy 对应方案。
 
 > 注意：`statechart` 与 `poteto-mode/scripts/` 自带 TypeScript 工程，运行前需 `npm install` 及 Node/bun 环境。
+
+## impeccable：UI 去 AI 味（已接入自动路由）
+
+[pbakaus/impeccable](https://github.com/pbakaus/impeccable)（Apache-2.0）是确定性 AI-slop 检测器：扫描 HTML / 目录 / URL，按 62 条规则（Rust 编译，无 LLM、无 API key）标记"AI 设计味"（紫色渐变、卡片套卡片、Inter 字体、奶油底、破折号饱和等）。本移植**不搬**其完整的 `/impeccable` harness skill（PRODUCT.md / DESIGN.md / 24 命令 / 编辑 hook，对 WorkBuddy 过重且 hook 有 telemetry），而是做成一层薄封装 skill，只调用跨 harness 的 `npx impeccable detect`：
+
+```bash
+export DO_NOT_TRACK=1            # 关闭匿名 telemetry 记录（仅 detect 本身无需网络）
+npx impeccable detect <path|dir|url>   # 退出码 2=有 findings，0=干净，1=无法扫描
+```
+
+**自动路由**：在 `poteto-mode` 路由表新增 **UI design / frontend polish** 条目，并新增 `playbooks/ui-design.md` 剧本——当用户说「设计一个落地页 / 做个 dashboard / 改这个组件」时，`poteto-mode` 自动匹配该剧本，生成或评审界面后调用 `impeccable` 技能跑 `detect`、修正被标记的 AI 味、复扫直到干净。`Feature` 剧本也加了交叉引用：若功能包含 Web/UI 界面，收尾前先过 `impeccable` 闸门。
+
+它和 pstack 的关系：`unslop` 管**文字**层去 AI 味，`impeccable` 管 **UI / 视觉**层，两者互补。
 
 ## 尚未移植（小众 / 非必需）
 
@@ -107,7 +121,7 @@ npx skills add -g kalandramo/pstack       # 装到全局
 
 ### C. 用 skillhub 工具拉取 WorkBuddy 版
 
-本仓库根目录有 `skillhub.json` 清单（目录化 `workbuddy/` 下 48 个技能）。若想用 `npx skills add` 精确拉取 WorkBuddy 版目录：
+本仓库根目录有 `skillhub.json` 清单（目录化 `workbuddy/` 下 49 个技能）。若想用 `npx skills add` 精确拉取 WorkBuddy 版目录：
 
 ```bash
 npx skills add https://github.com/kalandramo/pstack/tree/workbuddy-port/workbuddy

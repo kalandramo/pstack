@@ -1,7 +1,7 @@
 {
   "name": "pstack-workbuddy",
-  "version": "1.0.0",
-  "description": "WorkBuddy-port of the pstack agent-skills collection (47 standalone + poteto-mode auto-router). Installed via `manage_skills.py` or `npx skills add .../tree/workbuddy-port/workbuddy`.",
+  "version": "1.1.0",
+  "description": "WorkBuddy-port of the pstack agent-skills collection (48 standalone + principles + poteto-mode auto-router + impeccable UI de-slop wrapper). Installed via manage_skills.py or npx skills add .../tree/workbuddy-port/workbuddy.",
   "homepage": "https://github.com/kalandramo/pstack",
   "skills": [
     {
@@ -57,6 +57,12 @@
       "description": "Use for \\\\\\\"how does X work\\\\\\\", code walkthroughs before changing something, and placement / ownership / layering questions (\\\\\\\"where should this live\\\\\\\", \\\\\\\"which package owns this\\\\\\\", \\\\\\\"is this the right layer\\\\\\\"). Explains subsystem architecture, runtime flow, onboarding mental models. Use why for motivation.",
       "version": "1.0.0",
       "location": "workbuddy/how"
+    },
+    {
+      "name": "impeccable",
+      "description": "Deterministic AI-slop detector for web UI. Wraps `npx impeccable detect` (62 rules, no LLM) to flag and fix AI-generated design tells (purple gradients, nested cards, Inter font, cream palettes, em-dash overuse).",
+      "version": "1.0.0",
+      "location": "workbuddy/impeccable"
     },
     {
       "name": "in-your-own-words",
